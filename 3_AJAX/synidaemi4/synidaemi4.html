@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX og JSON</title>
+</head>
+<body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	// sækjum JSON með jQuery getJSON aðferð, sjá nánar hér: http://api.jquery.com/jquery.getjson/
+	$.getJSON( "listi.json", function( data ) {
+	  
+	  // Skoðum JSON Object í console
+	  console.log(data);
+		 /*
+			{
+			  "one": "Singular sensation",
+			  "two": "Beady little eyes",
+			  "three": "Little birds pitch by my doorstep"
+			}
+		  */
+
+	  // búum til fylki sem mun geyma lista element ásamt JSON data.
+	  var items = [];
+	
+	  // Fyrir hvert og eitt property í JSON objectinu
+	  $.each( data, function( key, val ) {
+	  	// bætum í fylkið
+	    items.push( "<li id='" + key + "'>" + val + "</li>" );
+	  });
+	 
+	  // Skoðum items fylkið
+	  console.log(items);
+
+	 // Birtum óraðaðan lista í body
+	  $( "<ul/>", {	 			// búum til tómt <ul> og </ul> element
+	    "class": "listi",		// búum til class="listi"
+	    html: items.join( "" )  // sameinum strengi úr fylki og bætum við með html aðferð
+	  }).appendTo( "body" );	// bætum lista í body element
+	});
+
+</script>
+</body>
+</html>
+

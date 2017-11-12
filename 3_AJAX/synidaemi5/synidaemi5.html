@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX og JSON</title>
+</head>
+<body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$.getJSON( "data.json", function( data ) {
+
+	  // Skoðum JSON Object í console
+	  console.log(data);
+		/*
+		{
+			"results":[
+				{
+					"eventDateName":"Jónas R og Bandið",
+					"name":"Tónleikar",
+					"dateOfShow":"2017-03-17T22:00:00",
+					"userGroupName":"Bandið",
+					"eventHallName":"Café Rosenberg",
+					"imageSource":"https://d30qys758zh01z.cloudfront.net/images/medium/1.9976.jpg"
+				},
+				{
+					"eventDateName":"U2 Tribute Austurland að Glettingi",
+					"name":"Tónleikar",
+					"dateOfShow":"2017-03-18T20:30:00",
+					"userGroupName":"Bæjarbíó slf",
+					"eventHallName":"Bæjarbíó (Hafnarfirði)",
+					"imageSource":"https://d30qys758zh01z.cloudfront.net/images/medium/1.9941.jpg"
+				}
+			]
+		}	
+		*/
+
+	  // búum til fylki sem mun geyma objects.
+	  var concertEvents = [];
+	
+	  for(let i = 0; i<data.results.length; i++){
+			concertEvents.push
+			({
+				name:data.results[i].eventDateName,
+				where:data.results[i].eventHallName,
+				imageSrc:data.results[i].imageSource
+			});
+	   }
+	  // Skoðum concertEvents fylkið
+	  console.log(concertEvents);
+
+	  // Jónas R og Bandið
+	  console.log(concertEvents[0].name);  
+});
+
+</script>
+</body>
+</html>
+

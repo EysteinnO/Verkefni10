@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX og JSON</title>
+</head>
+<body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+// Sýnidæmi 1, sækjum JSON úr data.json með jQuery AJAX
+$.ajax({
+  'url': 'data.json',
+  'type': 'GET',
+  'dataType': 'json',
+  'success': function(response) {
+
+	// Birtum: Jónas R og Bandið
+	console.log(response.eventDateName);
+  }
+});
+
+
+</script>
+</body>
+</html>
+

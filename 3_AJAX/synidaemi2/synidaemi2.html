@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX og JSON</title>
+</head>
+<body>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+// jQuery Ajax skilar JSON objecti, response 
+// gögn fengin frá http://apis.is/concerts
+$.ajax({
+  'url': 'data.json',
+  'type': 'GET',
+  'dataType': 'json',
+  'success': function(response) {
+
+  	// Skoðum JSON object sem geymir fylkið results sem geymir alla objectana
+  	console.log(response);
+	/*
+		// dæmi um fyrstu tvær niðurstöður í response
+		{
+			"results":[
+				{
+					"eventDateName":"Jónas R og Bandið",
+					"name":"Tónleikar",
+					"dateOfShow":"2017-03-17T22:00:00",
+					"userGroupName":"Bandið",
+					"eventHallName":"Café Rosenberg",
+					"imageSource":"https://d30qys758zh01z.cloudfront.net/images/medium/1.9976.jpg"
+				},
+				{
+					"eventDateName":"U2 Tribute Austurland að Glettingi",
+					"name":"Tónleikar",
+					"dateOfShow":"2017-03-18T20:30:00",
+					"userGroupName":"Bæjarbíó slf",
+					"eventHallName":"Bæjarbíó (Hafnarfirði)",
+					"imageSource":"https://d30qys758zh01z.cloudfront.net/images/medium/1.9941.jpg"
+				}
+			]
+		}
+	*/
+
+	// Birtum U2 Tribute Austurland að Glettingi
+	console.log(response.results[1].eventDateName);  	// response er JSON object, results er fylki, eventDateName er key
+
+  }
+});
+
+</script>
+</body>
+</html>
