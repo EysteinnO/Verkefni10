@@ -1,41 +1,6 @@
 "use strict";
-
-//Livesearch bls 553 í bókinni
-
-(function() {
-    var $imgs = $('#gallery img');
-    var $search = $('#filter-search');
-    var cache = [];
-
-    $imgs.each(function () {
-        cache.push({
-            element: this,
-            text: this.alt.trim().toLowerCase()
-        });
-    });
-
-    function filter() {
-        var query = this.value.trim().toLowerCase();
-
-        cache.forEach(function (img) {
-            var index = 0;
-            if (query) {
-                index = img.text.indexOf(query);
-            }
-
-            img.element.style.display = index === -1 ? 'none' : '';
-        });
-    }
-
-    if ('oninput' in $search[0]) {
-        $search.on('input', filter);
-    } else {
-        $search.on('keyup', filter);
-    }
-
-}());
-
-$.getJSON( "http://apis.is/concerts", function( data ) {
+var jasonUrl = "http://apis.is/concerts";
+$.getJSON(jasonUrl, function (data) {
 
     var concertEvents = [];
     var images;
@@ -44,18 +9,18 @@ $.getJSON( "http://apis.is/concerts", function( data ) {
     var where;
     console.log(data);
 
-    for(let i = 0; i<data.results.length; i++){
+    for (let i = 0; i < data.results.length; i++) {
         concertEvents.push
         ({
-            name:data.results[i].eventDateName,
-            where:data.results[i].eventHallName,
-            imageSrc:data.results[i].imageSource,
-            when:data.results[i].dateOfShow
+            name: data.results[i].eventDateName,
+            where: data.results[i].eventHallName,
+            imageSrc: data.results[i].imageSource,
+            when: data.results[i].dateOfShow
         });
     }
 
     //Lúppað öllum myndum út
-    for(let i = 0; i<data.results.length; i++){
+    for (let i = 0; i < data.results.length; i++) {
 
         images = concertEvents[i].imageSrc;
         text = concertEvents[i].name;
@@ -76,11 +41,38 @@ $.getJSON( "http://apis.is/concerts", function( data ) {
     }
 
 
+});
 
 
-
+document.getElementById("everything").addEventListener("click", function () {
 
 });
+
+document.getElementById("country").addEventListener("click", function () {
+
+});
+
+//Date Filtering
+
+var FromDate = document.getElementById('From').value;
+var ToDate = document.getElementById('To').value;
+
+document.getElementById("set").addEventListener("click", displayDate);
+
+function displayDate() {
+    for (var j = 0; j < data.results.length; j++) {
+        date = concertEvents[j].when;
+
+        if (date >= FromDate && date <= ToDate) {
+            console.log(date);
+        }
+
+    }
+}
+
+
+
+
 
 
 

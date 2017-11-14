@@ -36,9 +36,9 @@
                 <!--Filtering buttons -->
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button">Höfuðborg</button>
-                        <button class="btn btn-secondary" type="button">Allt landið</button>
-                        <button class="btn btn-secondary" type="button">Landsbyggðin</button>
+                        <button id="capital" class="btn btn-secondary" type="button">Höfuðborg</button>
+                        <button id="everything" class="btn btn-secondary" type="button">Allt landið</button>
+                        <button id="country" class="btn btn-secondary" type="button">Landsbyggðin</button>
                     </span>
                 </div>
             </div>
@@ -47,131 +47,132 @@
         <div class="row">
             <div class="col-lg-4">
                 <h1>Dagsetning</h1>
-                <input type="text" class="form-control" placeholder="Frá">
-                <input type="text" class="form-control" placeholder="Til">
+                <input id="From" type="text" class="form-control" placeholder="Frá">
+                <input id="To" type="text" class="form-control" placeholder="Til">
+                <button id="set" class="btn btn-secondary" type="button">Stilla</button>
             </div>
         </div>
 
         <hr class="my-4">
 
         <!--Image view-->
+        <div id="gallery">
         <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img class="picture" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+
+                        <img class="picture" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+
+                        <img class="picture" data-tags="country" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
 
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+
+                        <img class="picture" data-tags="capital" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
 
+                        <img class="picture" data-tags="capital" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+
+                        <img class="picture" data-tags="capital" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
 
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+
+                        <img class="picture" data-tags="country" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
 
+                        <img class="picture" data-tags="capital" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+
+                        <img class="picture" data-tags="capital" src="" alt="" style="width:100%">
+                        <div class="caption">
+                            <p class="sugar"></p>
+                            <p class="daddy"></p>
+                            <p class="gimme"></p>
+                        </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-
-                    <img src="" alt="" style="width:100%">
-                    <div class="caption">
-                        <p class="sugar">Lorem ipsum...</p>
-                        <p class="daddy">Lorem ipsum...</p>
-                        <p class="gimme">Lorem ipsum...</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
 
@@ -179,15 +180,18 @@
 
 
 <!-- Optional JavaScript -->
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="jquery.js"></script>
+<script src="js.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
         integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
-<script src="js.js"></script>
+
 
 </body>
+
 </html>
